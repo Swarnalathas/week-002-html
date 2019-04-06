@@ -1,0 +1,42 @@
+body {
+    background-color:rgb(218, 205, 88, 0.233);
+    padding-top: 10px;
+    padding-right: 280px;
+    padding-bottom: 10px;
+    padding-left: 350px;
+}
+
+#heading1 {
+
+    color: rgb(17, 13, 13);
+    border-style: none;
+    background-color:rgb(52, 203, 230);
+    padding: 10 30 10 30; 
+    font-size: 30;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: center; 
+   
+}
+.addBtn {
+    background: #d9d9d9;
+    text-align: center;
+    font-size: 15;
+    cursor: pointer;    
+}
+
+#div1 {
+    color: black;
+    font-size: 20;
+    font-family: Arial, Helvetica, sans-serif;
+    border-style: none;
+}
+
+
+div {
+    color: black;
+    font-size: 20;
+    font-family: Arial, Helvetica, sans-serif;
+    border-style: double;
+}
+

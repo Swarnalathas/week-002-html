@@ -4,30 +4,44 @@
     <title>
         TechCourse Html Learning...
     </title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 
 <body>
-    <h1>My ToDo Application</h1>
+    <h1 id="heading1">My To Do List</h1>
+
     <form action="/index.html">
-        Course name: <input type="text" name="cname">
-        <input type="submit" value="Add">
+        <div id="div1">
+            Enter the Task List 
+            <input type="text" name="taskName" id="myInput" placeholder="Type here..."> 
+            <input type="button" value="Add Task" name ="addTaskButton" class="addBtn">
+       </div>
+        <div id="div1">
+            <p>Things to do : </p>
+        </div>
+        <div>
+            <table>
+                <tr>
+                    <td>First Task
+                        <input type="button" value="Add" name="add">
+                        <input type="button" value="Delete" name="delete">
+                    </td>
 
-        <p>Things to do :2 </p>
-        <table>
-            <tr>
-                <th>FirstTask :
-                    <input type="submit" Value="Done">
-                    <input type="submit" Value="Delete">
-                </th>
-            </tr>
-            <tr>
-                <th>SecondTask:
-                    <input type="submit" Value="Done">
-                    <input type="submit" value="Delete">
-                </th>
-            </tr>
-        </table>
-
+                </tr>
+                <tr>
+                    <td>Second Task
+                        <input type="button" value="Add" name="add">
+                        <input type="button" value="Delete" name="delete">
+                    </td>
+                </tr>
+                <tr>
+                        <td>Third Task
+                            <input type="button" value="Add" name="add">
+                            <input type="button" value="Delete" name="delete">
+                        </td>
+                    </tr>
+            </table>
+        </div>
     </form>
 </body>
 
