@@ -12,37 +12,42 @@
 
     <form action="/index.html">
         <div id="div1">
-            Enter the Task List 
-            <input type="text" name="taskName" id="myInput" placeholder="Type here..."> 
-            <input type="button" value="Add Task" name ="addTaskButton" class="addBtn">
-       </div>
+            Enter the Task List
+            <input type="text" name="taskName" id="myInput" placeholder="Type here...">
+            <input type="button" value="Add Task" name="addTaskButton" onclick="newTaskAdd()">
+        </div>
         <div id="div1">
             <p>Things to do : </p>
         </div>
         <div>
-            <table>
+            <table id="myTable">
                 <tr>
-                    <td>First Task
-                        <input type="button" value="Add" name="add">
-                        <input type="button" value="Delete" name="delete">
-                    </td>
-
+                    <td id ="aligntd">Meet Friends</td>
+                    <td><input type="button" value="Add" name="add"></td>
+                    <td><input type="button" value="Delete" name="delete"></td>              
                 </tr>
                 <tr>
-                    <td>Second Task
-                        <input type="button" value="Add" name="add">
-                        <input type="button" value="Delete" name="delete">
-                    </td>
+                    <td id ="aligntd"> Visit Library</td>
+                    <td><input type="button" value="Add" name="add"></td>
+                    <td><input type="button" value="Delete" name="delete"></td>                    
                 </tr>
                 <tr>
-                        <td>Third Task
-                            <input type="button" value="Add" name="add">
-                            <input type="button" value="Delete" name="delete">
-                        </td>
-                    </tr>
+                    <td id ="aligntd">Buy Milk</td>
+                    <td><input type="button" value="Add" name="add"></td>
+                    <td><input type="button" value="Delete" name="delete"></td>                
+                </tr>
+                <tr>
+                    <td id ="aligntd">Take to Guitar class</td>
+                    <td><input type="button" value="Add" name="add"></td>
+                   <td><input type="button" value="Delete" name="delete"></td>
+                </tr>
+                
             </table>
         </div>
     </form>
-</body>
+
+
+</body> 
+
 
 </html>
