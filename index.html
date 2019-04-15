@@ -5,89 +5,66 @@
         TechCourse Html Learning...
     </title>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
-<body onload="getTaskCount();">
+<body>
     <h1 id="heading1">My To Do List</h1>
 
     <form action="/index.html">
-        <div id="div1">
-            Enter the Task List
-            <input type="text" name="taskName" id="myInput" placeholder="Type here...">
-            <span onclick="newTaskAdd()" class="addBtn">Add Task</span>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">Enter the Task List</span>
+            </div>
+            <div>
+                <input type="text" class="form-control" placeholder="Type here..." aria-label="Username"
+                    aria-describedby="basic-addon1">
+            </div>
+            <div>
+                <button type="button" class="btn btn-outline-success">Add</button>
+            </div>
         </div>
-        <div id="div1">
-            <h2>Things to do :<span id="thingsToDo"></span></h2>         
+        <div class='container'>
+            <div class='row'>
+                <div class='col-sm-4'>
+                    Visit Library
+                    <button type="button" class="close" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class='col-sm-4'>
+                    Go To Shop
+                    <button type="button" class="close" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class='col-sm-4'>
+                    Swim Lessons
+                    <button type="button" class="close" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class='col-sm-12'>
+                    Meet Friends
+                    <button type="button" class="close" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class='col-sm-6'>
+                    Summit Assignment
+                    <button type="button" class="close" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class='col-sm-6'>
+                    Excercises
+                    <button type="button" class="close" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </div>
         </div>
-        <div>
-            <table id="myTable" class="tableStyleFormat" style="table-layout:fixed">
-                <tr>
-                    <td>Meet Friends</td>
-                    <td><input type="button" class="deleteBtn" value="Delete" name="delete"
-                            onclick="deleteMyTask(this)">
-                    </td>
-                </tr>
-                <tr>
-                    <td> Visit Library</td>
-                    <td><input type="button" class="deleteBtn" value="Delete" name="delete"
-                            onclick="deleteMyTask(this)">
-                    </td>
-                </tr>
-                <tr>
-                    <td>Buy Milk</td>
-                    <td><input type="button" class="deleteBtn" value="Delete" name="delete"
-                            onclick="deleteMyTask(this)">
-                    </td>
-                </tr>
-                <tr>
-                    <td>Take to Guitar class</td>
-                    <td><input type="button" class="deleteBtn" value="Delete" name="delete"
-                            onclick="deleteMyTask(this)">
-                    </td>
-                </tr>
-            </table>
-        </div>
-    </form>
-    <script type="text/javascript">
-        document.addEventListener('click', function (e) {
-            if (e.target.name == 'deleted') {
-                deleteMyTask(e.target);
-            }
-            getTaskCount();
-        });
-
-        function getTaskCount() {
-            document.getElementById("thingsToDo").innerHTML = 
-                 document.getElementById("myTable").rows.length;
-        }
-
-        function deleteMyTask(r) {
-            let i = r.parentNode.parentNode.rowIndex;
-            document.getElementById("myTable").deleteRow(i);
-        }
-
-        function newTaskAdd() {
-            if (document.getElementById('myInput').value === '') {
-                return;
-            } else {
-                let inputValue = document.getElementById('myInput').value;// alert ("inside");
-                // Insert a row in the table at the last row
-                let newRow = myTable.insertRow(myTable.rows.length);
-                // Insert a cell in the row at index 0
-                let newCell = newRow.insertCell(0);
-                let newButtonCell = newRow.insertCell(1);
-                // Append a text node to the cell
-                let newText = document.createTextNode(inputValue);
-                let newButton = document.createElement("button");
-                newButton.innerHTML = "Delete";
-                newButton.name = "deleted"
-                newButton.setAttribute("style", "font-size:20;background-color: rgb(207, 199, 199); text-align: center;width:50%;");
-                newCell.appendChild(newText);
-                newButtonCell.appendChild(newButton);
-                document.getElementById('myInput').value = "";
-            }
-        }
-    </script>
 </body>
 
 </html>
